@@ -1,0 +1,13 @@
+.paginator-item {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+}
+
+.paginator-item-odd {
+}
+
+.paginator-item-none {
+    background-color: rgba(255, 220, 220, .5);
+}
+

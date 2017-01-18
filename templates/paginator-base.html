@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">
+{% block paginator-css %}
+{% endblock %}
+
+{% block paginator %}
+
+{% endblock %}
+
+
+{#Include javascript files#}
+<script type="application/javascript" src="{% static "js/jquery-3.1.1.min.js" %}"></script>
+<script type="application/javascript" src="{% static "js/bootstrap.js" %}"></script>
+{% block paginator_js %}
+{% endblock %}

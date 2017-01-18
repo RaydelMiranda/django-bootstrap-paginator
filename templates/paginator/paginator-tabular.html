@@ -1,0 +1,35 @@
+{% extends "paginator-base.html" %}
+{% load static %}
+
+{% block paginator_js %}
+    <script src="{% static "js/jquery-3.1.1.min.js" %}" type="application/javascript"></script>
+    <script src="{% static "js/paginator.js" %}" type="application/javascript"></script>
+    <script type="application/javascript">
+        var app = new Pagination({{ page_count }});
+    </script>
+{% endblock %}
+
+{% block paginator-css %}
+        <link rel="stylesheet" href="{% static "css/paginator.css" %}">
+{% endblock %}
+
+{% block paginator %}
+    <div>
+    <div class="row">
+        <ul class="list-group" id="objects-list">
+            {% for value in rendered_items %}
+                <li class="paginator-item col-xs-3">{{ value }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+        <div class="text-center">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                {% for init in page_ranges %}
+                    <li><a href="#" onclick="app.paginate({{init}}, {{ init|add:page_count }})">{{ forloop.counter }}</a></li>
+                {% endfor %}
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
