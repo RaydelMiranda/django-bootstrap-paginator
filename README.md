@@ -33,7 +33,9 @@ The syntax of the tag is as follow:
 ```
 
 **sequence:** A sequence of objects to paginate.
+
 **objects per page:** How many objects will be shown per page.
+
 **L|T:** Show objects in **L**inear or **T**abular format.
 
 Example:
