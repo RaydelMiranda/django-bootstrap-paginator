@@ -1,4 +1,4 @@
-# A Bootstrap/Jquery paginator.
+# A Bootstrap/JQuery paginator.
 
 Django built in paginator require to make a new request to the server
 each time we browse pages.On the other hand, create a paginator using 
